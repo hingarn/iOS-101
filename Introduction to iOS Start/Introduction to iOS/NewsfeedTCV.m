@@ -19,12 +19,10 @@ static NSString *kNewsfeedCellIdentifier = @"NewsfeedCell";
 @interface NewsfeedTCV ()
 //private properties
 @property (nonatomic, strong) NSArray *newsfeedArticles;
-@property (nonatomic) int currentArticleIndex;
 @end
 
 @implementation NewsfeedTCV
 @synthesize newsfeedArticles = _newsfeedArticles;
-@synthesize currentArticleIndex = _currentArticleIndex;
 
 
 - (void) setNewsfeedArticles:(NSArray *)newsfeedArticles
@@ -37,7 +35,7 @@ static NSString *kNewsfeedCellIdentifier = @"NewsfeedCell";
 
 - (void) retrieveLatestGameArticles
 {
-    NSString *body = [[NSString stringWithFormat: v3ArticleAPIBody, currentGameId, self.currentArticleIndex] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *body = [[NSString stringWithFormat: v3ArticleAPIBody, currentGameId, 0] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURL *url = [NSURL URLWithString:[relatedArticleUrlV3 stringByAppendingString:body]];
     NSData *data = [NSData dataWithContentsOfURL:url];
     if ([data length] > 0) {
