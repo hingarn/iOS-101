@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="DIh-xo-eyd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="DIh-xo-eyd">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--NewsfeedTCV - Articles-->
         <scene sceneID="GIN-9x-797">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IT4-wb-rUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="5jN-vD-qAt" customClass="NewsfeedTCV" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Tg6-6N-aat">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -78,13 +77,13 @@
                         <segue destination="uV6-j0-o3h" kind="push" identifier="ShowArticleContent" id="Z8j-6i-5V0"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IT4-wb-rUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="674" y="158"/>
         </scene>
         <!--ArticleVC-->
         <scene sceneID="aDN-0V-sRf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhi-C0-axK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="uV6-j0-o3h" customClass="ArticleVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cWV-oM-xVw">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -106,13 +105,13 @@
                         <outlet property="webview" destination="SBZ-gF-ASI" id="qvZ-Nu-lIG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhi-C0-axK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1064" y="158"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lMZ-vK-A1r">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i33-e7-Kvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="DIh-xo-eyd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="b3o-Vy-9JU">
@@ -124,6 +123,7 @@
                         <segue destination="5jN-vD-qAt" kind="relationship" relationship="rootViewController" id="Rbu-Nn-jDu"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i33-e7-Kvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="148" y="158"/>
         </scene>

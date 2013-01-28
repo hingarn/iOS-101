@@ -10,6 +10,7 @@
 
 #define contentOnlyArticleUrl @"http://m.ign.com/articles/%@?content_only"
 #define fullSiteArticleUrlTemplate @"http://www.ign.com/articles/%@"
+#define GHIntervalLocalize(key, defaultValue) NSLocalizedStringWithDefaultValue(key, tableName, bundle, defaultValue, nil)
 
 @implementation IGN_JSONParser
 
@@ -52,13 +53,6 @@
     
     return [resultArray copy];
 }
-
-
-
-
-
-
-#define GHIntervalLocalize(key, defaultValue) NSLocalizedStringWithDefaultValue(key, tableName, bundle, defaultValue, nil)
 
 + (NSString *)gh_localizedStringForTimeInterval:(NSTimeInterval)interval includeSeconds:(BOOL)includeSeconds tableName:(NSString *)tableName bundle:(NSBundle *)bundle {
     NSTimeInterval intervalInSeconds = fabs(interval);

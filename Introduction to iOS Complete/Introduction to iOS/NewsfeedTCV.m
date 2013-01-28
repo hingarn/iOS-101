@@ -86,12 +86,6 @@ static NSString *kNewsfeedCellIdentifier = @"NewsfeedCell";
     self.loadMoreButton.layer.borderWidth = 1.0f;
 }
 
-- (void)viewDidUnload
-{
-    [self setLoadMoreButton:nil];
-    [super viewDidUnload];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -107,10 +101,10 @@ static NSString *kNewsfeedCellIdentifier = @"NewsfeedCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kNewsfeedCellIdentifier];
-    NSDictionary *article = [self.newsfeedArticles objectAtIndex:indexPath.row];
-   
     // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kNewsfeedCellIdentifier];
+    
+    NSDictionary *article = [self.newsfeedArticles objectAtIndex:indexPath.row];
     cell.textLabel.text = [article valueForKey:@"articleTitle"];
     cell.detailTextLabel.text = [article valueForKey:@"publishDate"];
     

@@ -57,11 +57,6 @@ static NSString *kNewsfeedCellIdentifier = @"NewsfeedCell";
     [self retrieveLatestGameArticles];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -77,9 +72,8 @@ static NSString *kNewsfeedCellIdentifier = @"NewsfeedCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kNewsfeedCellIdentifier];
     // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kNewsfeedCellIdentifier];
     UIImageView *cellimage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 15, 88, 49)];
     [cell.contentView addSubview:cellimage];
     
